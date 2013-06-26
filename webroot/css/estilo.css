@@ -1,0 +1,360 @@
+/* Importações para Letras */
+@import url(http://fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic);
+/* FIM da Importações para Letras */
+
+/* Estilo do titulo */
+.titulo{
+		font-size: 28px;
+		font-family: 'Noto Sans', sans-serif;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		margin-top: 5px;
+}
+/* FIM do Estilo do titulo */
+
+
+/* Estilo do titulo do TOPO */
+.topo-titulo{
+		font-size: 50px;
+		line-height: 20px;
+		color: #000000;
+		font-family: 'Noto Sans', sans-serif;
+		margin: 0 auto;
+		margin-top: 30px;
+		text-decoration: none;
+		font-weight: bold;
+		font-style: oblique; 
+}
+
+.topo-titulo a{
+		text-decoration: none;
+}
+
+.topo-titulo a:hover{
+		text-decoration: none;
+}
+/* FIM do Estilo do titulo do TOPO */
+
+/* Estilo para ajeitar a formatação do nome "Sejá ebm vindo(a) Usuario" */
+.nome-login{
+	float: none;
+	padding: 9px 0px 10px;
+	padding-left: 10px;
+	color: #333333;
+	text-decoration: none;
+	text-shadow: 0 1px 0 #ffffff;
+}
+/* FIM do Estilo para ajeitar a formatação do nome "Sejá ebm vindo(a) Usuario" */
+
+
+/* Estilo para separar os botões Enviar do Limpar, nos formularios */
+.espaco-direita{
+		margin-right: 15%;
+}
+/* FIM do Estilo para separar os botões Enviar do Limpar, nos formularios */
+ 
+
+/* Estilo para os formularios maiores e letras dos formularios, como por exemplo Paciente e Fruncionarios */
+.form-cadastro {
+        max-width: 49%;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+       
+      }
+
+.form-cadastro .form-cadastro-heading,
+.form-cadastro .checkbox {
+        margin-bottom: 0px;
+      }
+
+.form-cadastro {
+        height: auto;
+        margin-bottom: 15px;
+        padding: 7px 9px;
+      }
+/* FIM do Estilo para os formularios grandes */
+
+
+/* Estilo para os formularios pequenos, como por exemplo Função */
+.form-cadastro-pequeno {
+        max-width: 19%;
+     
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+      }
+ /* FIM do Estilo para os formularios pequenos */
+
+
+/* Estilo para os formularios medios, como por exemplo Usuarios */
+.form-cadastro-medio {
+        max-width: 31%;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+      }
+/* FIM do Estilo para os formularios medios */
+
+/* estilo para a class topo */
+.topo{
+
+	  margin-right: auto;
+  	margin-left: auto;
+
+  *zoom: 1;
+    height: 92px;
+}
+
+/* Fim do estilo para a class topo */
+
+/* Estilo para o roda-pé */
+#rodape{
+
+	width: auto;
+	height: 50px;
+	background: #3e83c9;
+	-webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+          color: #ffffff;
+	text-align: right;
+}
+
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 15px;
+	padding-right: 25px;
+	padding-top: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+/* Fim Estilo para o roda-pé */
+
+/* Estilos em outras resoluções */
+
+@media (max-width: 767px) {
+.topo-titulo{
+    font-size: 40px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+
+.img-topo{
+
+	width: 90px;
+	height: 70px;
+}
+
+.titulo{
+		font-size: 20px;
+		line-height: 20px;
+		line-height: 20px;
+		font-family: 'Noto Sans', sans-serif;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		margin-top: 5px;
+}
+
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 15px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+
+}
+
+@media (max-width: 550px) {
+.topo-titulo{
+    font-size: 40px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+
+.img-topo{
+
+	width: 90px;
+	height: 70px;
+}
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 13px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 27px;
+	height: 22px;
+}
+
+}
+
+
+@media (max-width: 445px) {
+.topo-titulo{
+    font-size: 40px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+
+.img-topo{
+
+	width: 90px;
+	height: 70px;
+}
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 11px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 27px;
+	height: 22px;
+}
+
+}
+
+
+@media (max-width: 400px) {
+
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 21px;
+	height: 17px;
+}
+
+
+}
+
+@media (max-width: 380px) {
+.topo-titulo{
+    font-size: 30px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+.img-topo{
+
+	width: 108px;
+	height: 85px;
+}
+
+.titulo{
+		font-size: 20px;
+		font-family: 'Noto Sans', sans-serif;
+		margin: 0 auto;
+		margin-bottom: 15px;
+		margin-top: 5px;
+}
+
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 21px;
+	height: 17px;
+}
+
+}
+
+@media (max-width: 306px) {
+.topo-titulo{
+    font-size: 30px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+.img-topo{
+
+	width: 103px;
+	height: 80px;
+}
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 21px;
+	height: 17px;
+}
+}
+
+@media (max-width: 276px) {
+.topo-titulo{
+    font-size: 20px;
+    line-height: 20px;
+    color: #000000;
+    font-family: 'Noto Sans', sans-serif;
+    margin: 0 auto;
+    margin-top: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-style: oblique; 
+}
+.img-topo{
+
+	width: 51px;
+	height: 40px;
+}
+.rodape{
+	font-family: 'Noto Sans', sans-serif;
+	font-size: 10px;
+	font-style: italic;
+	font-weight: bold;
+}
+
+.img-logo-mini{
+
+	width: 21px;
+	height: 17px;
+}
+}
