@@ -26,9 +26,32 @@
             senhaC.style.backgroundColor = "#88F79B";
 
             return true;
-        }   </script>  
+        }   </script> 
+        <script type="text/javascript">
+        function valida( frm )
+{
+var nome = frm.nome.value ;
+var msg = "" ;
+if ( nome.search( /\s/g ) != -1 )
+{
+msg+= "Não é permitido espaços em branco\n" ;
+nome = nome.replace( /\s/g , "" ) ;
+}   
+if ( nome.search( /[^a-z0-9]/i ) != -1 )
+{
+msg += "Não é permitido caracteres especiais" ;
+nome = nome.replace( /[^a-z0-9]/gi , "" ) ;
+}
+if ( msg )
+{
+alert( msg ) ;
+frm.nome.value = nome ;
+return false ;
+}
+return true ;   
+}
       
-
+</script>
 
   <?php
         
@@ -112,11 +135,11 @@
         <div class="tab-pane" id="tab2">
 
 
-           <form action="" method="post" class="form-cadastro-medio">
+           <form action="" method="post" class="form-cadastro-medio" name="frm" id="frm" onsubmit="return valida( this );" >
                 <p class="titulo form-signin-heading">Novo Usuário</p>
                 
                 <label>Login*: </label>
-                <input type="text" name="nome" required class="span4" /><br />
+                <input type="text" id="nome" name="nome" required class="span4" /><br />
 
                 <label>Senha*: </label>
                 <input type="password" name="senha" id="senha"  required class="span4" /><br />

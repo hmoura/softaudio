@@ -54,7 +54,7 @@
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/occupations/update/<?=$ocupacao->id?>" class="btn btn-primary btn-small">Editar</a>
-                                <a href="<?php echo WWWROOT?>/occupations/delete/<?=$ocupacao->id?>" class="btn btn-danger btn-small">Excluir</a>
+                                <a href="<?php echo WWWROOT?>/occupations/delete/<?=$ocupacao->id?>"  class="btn btn-danger btn-small confirm">Excluir</a>
                             </div>
                         </td>
                     </tr>

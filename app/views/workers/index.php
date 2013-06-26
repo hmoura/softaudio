@@ -66,7 +66,7 @@
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/workers/update/<?=$profissional->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;
-                                <a href="<?php echo WWWROOT?>/workers/delete/<?=$profissional->id?>" class="btn btn-danger btn-small">Excluir</a>
+                                <a href="<?php echo WWWROOT?>/workers/delete/<?=$profissional->id?>"  class="btn btn-danger btn-small confirm">Excluir</a>
                             </div>
                         </td>
                     </tr>

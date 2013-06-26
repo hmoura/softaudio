@@ -41,7 +41,7 @@
       
     <body>
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
-
+        <?php echo $_SESSION['nome']?> 
          <div class="container tabbable"> <!-- Only required for left/right tabs -->
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Listar Pacientes Cadastradas</a></li>
@@ -78,7 +78,7 @@
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/people/update/<?=$pessoa->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;
-                                <a href="<?php echo WWWROOT?>/people/delete/<?=$pessoa->id?>" class="btn btn-danger btn-small">Excluir</a>
+                                <a href="<?php echo WWWROOT?>/people/delete/<?=$pessoa->id?>"  class="btn btn-danger btn-small confirm">Excluir</a>
                             </div>
                         </td>
                     </tr>
