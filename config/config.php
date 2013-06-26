@@ -7,7 +7,7 @@ header('Content-type: text/html; charset=utf-8');
 session_name('f1eab0a18e58e4702476283e44486c800fc');
 session_start();
 ob_start();
-//set_time_limit();
+set_time_limit();
 date_default_timezone_set('America/Recife');
 ini_set('display_errors', 0);// 0 for production
 
@@ -19,7 +19,7 @@ $DOCUMENT_ROOT = dirname(__FILE__);
 $DOCUMENT_ROOT = substr($DOCUMENT_ROOT, 0, strpos($DOCUMENT_ROOT, DS."config"));
 
 // configuracao de servidor
-define('DIR', '/');
+define('DIR', '');
 define('SYSTEM_NAME', 'SoftAudio');
 
 // configuracao do banco de dados
