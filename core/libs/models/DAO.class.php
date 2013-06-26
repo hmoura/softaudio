@@ -133,6 +133,7 @@ class DAO extends DBUtil
 		if(mysql_query($this->sql))
 		{
 			$this->Return = TRUE;
+			
 		}
 		if ($debbug)
 		{
