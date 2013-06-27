@@ -51,6 +51,9 @@
                 <div class=" tab-pane active" id="tab1">
                    <p class="titulo">Listar Pacientes Cadastrados</p>
                    <?php default_messages()?>
+
+                   
+
             <table class="table table-striped table-hover table-bordered">
                 <thead>
                     <tr>
