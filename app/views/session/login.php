@@ -8,6 +8,8 @@ if ($_POST)
         'deleted_at' => ('0000-00-00 00:00:00')
         
     );
+
+     
     
     $usuario = $dao->Retrieve('Users', $dados);//se colocar o terceiro parametro ele retorna a string da pesquisa
 
