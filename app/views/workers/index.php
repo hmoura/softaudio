@@ -23,6 +23,13 @@
         $controller = new Occupations_Controller();
         $funcao = $controller->search();
         ?>
+        <script>
+              jQuery(function($){
+                $("#cpf").mask("999.999.999-99");
+                $("#campoTelefone").mask("(999) 999-9999");
+                $("#campoSenha").mask("***-****");
+                });
+        </script>
 
         
 
@@ -106,7 +113,7 @@
                 <label class="span2">CR: </label>
                 </div>
                 <div class="controls controls-row"> 
-                <input class="span2" type="text" name="cpf" required placeholder="CPF"/>
+                <input class="span2" type="text" name="cpf" id="cpf"  required placeholder="CPF"/>
                 <input class="span2" type="text" name="rg" required placeholder="RG"/>
                 <input class="span2" type="text" name="cr" placeholder="CR"/>
                 </div>
