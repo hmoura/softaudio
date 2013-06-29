@@ -63,7 +63,7 @@ class Occupations_Controller extends App_Controller{
             
            if($dao->Update($ocupacao))
            {
-                 $MSG->editado[] = '';
+                 $MSG->edit[] = '';
                 
            }else
            {

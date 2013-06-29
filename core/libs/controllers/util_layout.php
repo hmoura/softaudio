@@ -52,6 +52,16 @@ function default_messages()
 		}
 			//echo "<p class=\"notice\"><span>Notice</span>$msg</p>";
 	}
+	if(count($MSG->edit))
+	{
+		foreach ($MSG->edit as $msg) 
+		{
+			echo "<div class=\"alert alert-success\">
+                <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
+                <strong>Editado com Sucesso !</strong> $msg
+            </div>";
+		}
+	}
 }
 
 function title($str=false)

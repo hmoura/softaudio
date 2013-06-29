@@ -78,7 +78,7 @@ class People_Controller extends App_Controller{
 
            if($dao->Update($pessoa))
             {
-                 $MSG->editado[] = '';
+                 $MSG->edit[] = '';
                 
            }else
            {

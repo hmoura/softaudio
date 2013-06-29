@@ -27,7 +27,7 @@ class Users_Controller extends App_Controller{
 
             if($dao->Update($usuario))
                 {
-                 $MSG->editado[] = '';
+                 $MSG->edit[] = '';
                 
            }else
            {
