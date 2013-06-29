@@ -88,8 +88,8 @@ class Workers_Controller extends App_Controller{
 
             if($dao->Update($profissional))
              {
-                 $MSG->edit[] = '';
-                
+                 $MSG->edit[] = ''
+;                
            }else
            {
                 $MSG->error[] = '';

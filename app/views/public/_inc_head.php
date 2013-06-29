@@ -11,3 +11,10 @@
 <link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/bootstrap/css/bootstrap-responsive.css" />
 <!-- Folha de estilo -->
 <link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/css/estilo.css" />
+<!-- SpyValidation -->
+<link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/css/SpryValidationTextField.css"/>
+<!-- SpyValidation -->
+<link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/css/SpryValidationTextarea.css"/>
+<!-- SpyValidation -->
+<link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/css/SpryValidationSelect.css"/>
+   
