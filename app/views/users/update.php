@@ -37,13 +37,13 @@
                 <input type="hidden" name="usuario" value="1" />
 
                 <label>Login: </label>
-                <input type="text" name="nome" class="span4" required value="<?php echo $usuario->nome?>" /><br />
+                <input type="text" name="nome" maxlength="40" class="span4" required value="<?php echo $usuario->nome?>" /><br />
 
                 <label>E-mail: </label>
-                <input type="email" name="email" class="span4" required value="<?php echo $usuario->email?>" /><br />
+                <input type="email" name="email" maxlength="80" class="span4" required value="<?php echo $usuario->email?>" /><br />
 
                 <label>Senha: </label>
-                <input type="password" name="senha" class="span4" required value="<?php echo $usuario->senha?>" /><br />
+                <input type="password" name="senha" maxlength="30" class="span4" required value="<?php echo $usuario->senha?>" /><br />
                 <br>
                 <center>
                     <button type="submit" class="btn btn-large btn-primary">Confirmar</button>

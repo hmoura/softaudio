@@ -1,24 +1,8 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-        <link rel="stylesheet" href="http://code.jquery.com/ui/1.9.0/themes/base/jquery-ui.css" />
-        <script src="http://code.jquery.com/jquery-1.8.2.js"></script>
-        <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script>
+        
           
-          <script type="text/javascript">
-
-                        $(function() {
-                            $("#data_nascimento").datepicker({
-
-                            dateFormat: 'dd/mm/yy',
-                            dayNames: ['Domingo','Segunda','Terça','Quarta','Quinta','Sexta','Sábado','Domingo'],
-                            dayNamesMin: ['D','S','T','Q','Q','S','S','D'],
-                            dayNamesShort: ['Dom','Seg','Ter','Qua','Qui','Sex','Sáb','Dom'],
-                            monthNames: ['Janeiro','Fevereiro','Março','Abril','Maio','Junho','Julho','Agosto','Setembro','Outubro','Novembro','Dezembro'],
-                            monthNamesShort: ['Jan','Fev','Mar','Abr','Mai','Jun','Jul','Ago','Set','Out','Nov','Dez']
-                           
-                                });
-                            });
-                    </script>
+          
 	
     <head>
         <?php auth('yes')?>
@@ -34,9 +18,7 @@
         $controller = new People_Controller();
         $lista = $controller->search();
         ?>
-       
-  
-       
+     
     </head>
       
     <body>
@@ -73,7 +55,7 @@
                     <tr>
                         <td><?php echo $pessoa->nome?></td>
 
-                        <td><?php echo strftime("%d/%m/%Y", strtotime($pessoa->data_nascimento))?></td><!--$pessoa->data_nascimento-->
+                        <td><?php echo strftime("%d/%m/%Y", strtotime($pessoa->dataNascimento))?></td><!--$pessoa->data_nascimento-->
                         <td><?php echo $pessoa->cpf?></td> 
                         <td><?php echo $pessoa->tel?></td>
                         <td><?php echo $pessoa->cel?></td>
@@ -97,16 +79,17 @@
 
                 <div class="controls">
                     <label class="control-label">Nome Completo*: </label>
-                    <input type="text" name="nome" required placeholder="Nome Completo" class="span6"/>
+                    <input type="text" name="nome" required placeholder="Nome Completo"  maxlength="80" class="span6"/>
+           
                 </div>
                 <div class="controls controls-row" >
                     <label class="span2" >Data de Nascimento*: </label>
-                    <label class="span2" >CPF: </label> 
-                    <label class="span2" >RG: </label> 
+                    <label class="span2" >CPF*: </label> 
+                    <label class="span2" >RG*: </label> 
                 </div>
              
-                 <div class="controls controls-row">  
-                    <input class="span2" type="text" required id="data_nascimento" placeholder="Data de Nascimento"/>
+                 <div class="controls controls-row"> 
+                    <input class="span2" type="date" name="dataNascimento" required placeholder="Data de Nascimento"/>
                     <input class="span2" type="text" required name="cpf" placeholder="CPF"/>
                     <input class="span2" type="text" required name="rg" placeholder="RG"/>
                    
@@ -119,8 +102,8 @@
                     
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="rua" required placeholder="Rua"/>
-                    <input class="span2" type="text" name="numero" required placeholder="Número"/>  
+                    <input class="span4" type="text" name="rua" maxlength="50" required placeholder="Rua"/>
+                    <input class="span2" type="text" name="numero" required maxlength="5" placeholder="Número"/>  
                     
                 </div>
 
@@ -129,12 +112,12 @@
                     <label class="span1">CEP*: </label>
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="bairro" required placeholder="Bairro"/>
+                    <input class="span4" type="text" name="bairro" maxlength="50" required placeholder="Bairro"/>
                     <input class="span2" type="text" name="cep" required placeholder="CEP"/>
                 </div>
                 <div class="controls">
                     <label class="control-label">Complemento: </label>
-                    <input class="span6" type="text" name="complemento" placeholder="Complemento"/>
+                    <input class="span6" type="text" name="complemento" maxlength="100" placeholder="Complemento"/>
                 </div>
                 
                 <div class="controls controls-row" >
@@ -143,7 +126,7 @@
                 </div>
 
                <div class="controls controls-row" >
-                    <input class="span4" type="text" name="cidade" required placeholder="Cidade"/>
+                    <input class="span4" type="text" name="cidade" required pmaxlength="80" laceholder="Cidade"/>
                      <select class="span2" type="text" name="estado" rows="5" required placeholder="Estado">
                                 <option></option>
                                  <option value="AC">AC</option>
@@ -186,7 +169,7 @@
                 </div>
                 <div class="controls">
                     <label class="control-label">E-mail: </label>
-                    <input class="span6" type="email" name="email" placeholder="E-mail"/>
+                    <input class="span6" type="email" name="email" maxlength="50" placeholder="E-mail"/>
                 </div>
                 <br>
                    <center>

@@ -89,7 +89,7 @@
 
                 <div class="controls">
                     <label class="control-label">Nome Completo*: </label>
-                    <input type="text" name="nome" required placeholder="Nome Completo" class="span6"/>
+                    <input type="text" name="nome" maxlength="80" required placeholder="Nome Completo" class="span6"/>
                 </div>
                 
                 <div class="controls controls-row " >
@@ -123,8 +123,8 @@
                     
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="rua" required placeholder="Rua"/>
-                    <input class="span2" type="text" name="numero" required placeholder="Número"/>  
+                    <input class="span4" type="text" name="rua" maxlength="50" required placeholder="Rua"/>
+                    <input class="span2" type="text" name="numero" required maxlength="5" placeholder="Número"/>  
                     
                 </div>
 
@@ -134,13 +134,13 @@
                 </div>
                
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="bairro" required placeholder="Bairro"/>
+                    <input class="span4" type="text" name="bairro" maxlength="50" required placeholder="Bairro"/>
                     <input class="span2" type="text" name="cep" required placeholder="CEP"/>
                 </div>
 
                 <div class="controls">
                     <label class="control-label">Complemento: </label>
-                    <input class="span6" type="text" name="complemento" placeholder="Complemento"/>
+                    <input class="span6" type="text" name="complemento" maxlength="100" placeholder="Complemento"/>
                 </div>
 
                <div class="controls controls-row" >
@@ -149,7 +149,7 @@
                 </div>
 
                <div class="controls controls-row" >
-                    <input class="span4" type="text" name="cidade" required placeholder="Cidade"/>
+                    <input class="span4" type="text" name="cidade" required maxlength="80" placeholder="Cidade"/>
                         <select class="span2" type="text" name="estado" rows="5" required placeholder="Estado">
                                 <option></option>
                                 <option value="AC">AC</option>
@@ -193,7 +193,7 @@
                 </div>
                 <div class="controls">
                     <label class="control-label">E-mail: </label>
-                    <input class="span6" type="email" name="email" placeholder="E-mail"/>
+                    <input class="span6" type="email" name="email" maxlength="80" placeholder="E-mail"/>
                 </div>
                 <br>
                 <center>

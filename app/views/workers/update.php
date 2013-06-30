@@ -31,7 +31,7 @@
 
                 <div class="controls">
                     <label class="control-label">Nome Completo*: </label>
-                    <input type="text" name="nome" placeholder="Nome Completo" class="span6" required value="<?php echo $profissional->nome?>"/>
+                    <input type="text" name="nome" maxlength="80" placeholder="Nome Completo" class="span6" required value="<?php echo $profissional->nome?>"/>
                 </div>
                 
                 <div class="controls controls-row " >
@@ -71,7 +71,7 @@
                     
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="rua" placeholder="Rua" required value="<?php echo $profissional->rua?>" />
+                    <input class="span4" type="text" name="rua" placeholder="Rua" maxlength="50" required value="<?php echo $profissional->rua?>" />
                     <input class="span2" type="text" name="numero" placeholder="Número" required value="<?php echo $profissional->numero?>" />  
                     
                 </div>
@@ -82,13 +82,13 @@
                 </div>
                
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="bairro" placeholder="Bairro" required value="<?php echo $profissional->bairro?>" />
+                    <input class="span4" type="text" name="bairro" placeholder="Bairro" maxlength="50" required value="<?php echo $profissional->bairro?>" />
                     <input class="span2" type="text" name="cep" placeholder="CEP" required value="<?php echo $profissional->cep?>"/>
                 </div>
 
                 <div class="controls">
                     <label class="control-label">Complemento: </label>
-                    <input class="span6" type="text" name="complemento" placeholder="Complemento" value="<?php echo $profissional->complemento?>" />
+                    <input class="span6" type="text" name="complemento" maxlength="100" placeholder="Complemento" value="<?php echo $profissional->complemento?>" />
                 </div>
 
                <div class="controls controls-row" >
@@ -97,7 +97,7 @@
                 </div>
 
                <div class="controls controls-row" >
-                    <input class="span4" type="text" name="cidade" placeholder="Cidade" required value="<?php echo $profissional->cidade?>" />
+                    <input class="span4" type="text" name="cidade" placeholder="Cidade" maxlength="80" required value="<?php echo $profissional->cidade?>" />
                       <select class="span2" type="text" name="estado" rows="5" required placeholder="Estado">
                                 <option value="<?php echo $profissional->estado?>">-- <?php echo $profissional->estado?> --</option>
                                 <option value="AC">AC</option>
@@ -140,7 +140,7 @@
                 </div>
                 <div class="controls">
                     <label class="control-label">E-mail: </label>
-                    <input class="span6" type="email" name="email" placeholder="E-mail" value="<?php echo $profissional->email?>"/>
+                    <input class="span6" type="email" name="email" placeholder="E-mail" maxlength="80" value="<?php echo $profissional->email?>"/>
                 </div>
 
                 <br>

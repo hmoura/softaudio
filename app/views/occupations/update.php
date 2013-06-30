@@ -38,7 +38,7 @@
                 <input type="hidden" name="ocupacao" value="1" />
 
                 <label>Função: </label>
-                <input type="text" name="tipoOcupacao" required value="<?php echo $ocupacao->tipoOcupacao?>" /><br />
+                <input type="text" name="tipoOcupacao" maxlength="45" required value="<?php echo $ocupacao->tipoOcupacao?>" /><br />
 
                 <br>
                 <center>

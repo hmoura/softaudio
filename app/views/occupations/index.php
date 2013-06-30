@@ -72,7 +72,7 @@
                 <p class="titulo form-signin-heading">Nova Função</p>
 
                 <label>Função*: </label>
-                <input type="text" required name="tipoOcupacao" /><br />
+                <input type="text" maxlength="45" required name="tipoOcupacao" /><br />
                 <br>
                 <center>
                     <button type="submit" class="btn btn-primary espaco-direita">Cadastrar</button>
