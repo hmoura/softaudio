@@ -44,7 +44,7 @@ class Occupations_Controller extends App_Controller{
 		$dao = new DAO();
 
 		// método Retrieve() - Nome da classe e parâmetros de busca
-        $funcao = $dao->Retrieve('Occupations', 'where deleted_at = "0000-00-00 00:00:00"  order by tipoOcupacao');
+        $funcao = $dao->Retrieve('Occupations', 'where deleted_at is null order by tipoOcupacao');
 
         return $funcao;
 	}

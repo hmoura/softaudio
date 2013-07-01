@@ -1,9 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<script type="text/javascript" src="<?php echo WEBROOT?>/bootstrap/js/jquery-ui.js"></script>
+
 	
     <head>
-        <?php auth('yes')?>
+        
 
   <?php
         
@@ -37,9 +37,10 @@
         ?>
       
         <?php
-        $usuarios = $dao->Retrieve('Users', 'where deleted_at = "0000-00-00 00:00:00"  order by nome');
+        $usuarios = $dao->Retrieve('Users', 'order by nome');
         ?>
     	<title>SoftAudio</title>
+       <?php auth('yes')?>
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
         
     </head>
@@ -91,10 +92,10 @@
                 <p class="titulo form-signin-heading">Novo Usuário</p>
                 
                 <label>Login*: </label>
-                <input type="text" id="nome" maxlength="40" name="nome" required class="span4" /><br />
+                <input type="text" id="nome" maxlength="40" name="nome"  required class="span4" /><br />
 
                 <label>Senha*: </label>
-                <input type="password" name="senha" maxlength="30" maxlength="80" id="senha"  required class="span4" /><br />
+                <input type="password" name="senha" maxlength="30" id="senha"  required class="span4" /><br />
 
                 <label>Confirma senha*: </label>
                 <input type="password" name="senhaC" id="senhaC" maxlength="30" onchange="ver_senha('senha')" required class="span4" /><br />

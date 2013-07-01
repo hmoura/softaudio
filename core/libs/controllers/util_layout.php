@@ -15,18 +15,43 @@ function default_messages()
             $id = uniqid();
             echo "<div class=\"alert alert-success\">
                 <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
-                <strong>Sucesso!</strong> $msg
+               <p class=\"menssagens\"><strong>Cadastrado Com Sucesso!</strong></p> $msg
             </div>";
 			//echo "<p class=\"success\"><span>Success</span>$msg</p>";
         }
 	}
+
+	if (count($MSG->edit))
+	{
+		foreach ($MSG->edit as $msg)
+		{
+            $id = uniqid();
+            echo "<div class=\"alert alert-success\">
+                <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
+                <p class=\"menssagens\"><strong>Editado Com Sucesso!</strong></p> $msg
+            </div>";
+			
+        }
+	}
+
+	if(count($MSG->logado))
+	{
+		foreach ($MSG->logado as $msg)
+		{
+            echo "<div class=\"alert alert-error\">
+                <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
+                <p class=\"menssagens\"><strong>Senha ou Login Incorreto.</strong></p> $msg
+            </div>";
+		}
+	}
+
 	if(count($MSG->error))
 	{
 		foreach ($MSG->error as $msg)
 		{
             echo "<div class=\"alert alert-error\">
                 <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
-                $msg
+                <p class=\"menssagens\"><strong>Erro!</strong></p> $msg
             </div>";
 		}
 	}
@@ -36,7 +61,7 @@ function default_messages()
 		{
             echo "<div class=\"alert alert-warning\">
                 <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
-                <strong>Atenção!</strong> $msg
+                <p class=\"menssagens\"><strong>Atenção!</strong></p> $msg
             </div>";
 		}
 			//echo "<p class=\"alert\"><span>Alert</span>$msg</p>";
@@ -51,16 +76,6 @@ function default_messages()
             </div>";
 		}
 			//echo "<p class=\"notice\"><span>Notice</span>$msg</p>";
-	}
-	if(count($MSG->edit))
-	{
-		foreach ($MSG->edit as $msg) 
-		{
-			echo "<div class=\"alert alert-success\">
-                <a class=\"close\" data-dismiss=\"alert\" href=\"#\">×</a>  
-                <strong>Editado com Sucesso !</strong> $msg
-            </div>";
-		}
 	}
 }
 

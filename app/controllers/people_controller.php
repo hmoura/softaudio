@@ -49,7 +49,7 @@ class People_Controller extends App_Controller{
 		$dao = new DAO();
 
 		// método Retrieve() - Nome da classe e parâmetros de busca
-        $lista = $dao->Retrieve('People', 'where deleted_at = "0000-00-00 00:00:00"  order by nome');
+        $lista = $dao->Retrieve('People', 'where deleted_at is null order by nome');
 
         return $lista;
 	}
