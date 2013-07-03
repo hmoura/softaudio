@@ -53,8 +53,7 @@
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                       <!-- <th>Função</th>-->
-                        <th>Telefone</th>
+                        <th>Função</th>                        <th>Telefone</th>
                         <th>Celular</th>
                         <th>Data de Cadastro</th>
                         <th>Opções</th>
@@ -65,8 +64,14 @@
                
                 <?php foreach ($lista as $profissional):?>
                     <tr>
-                        <td><?php echo $profissional->nome?></td>                       
-                     <!--   <td><?php echo $profissional->ocupacao?></td> -->
+                        <td><?php echo $profissional->nome?></td>  
+                        <!-- Buscar chave estrangeira e mostrar na GRID index da tabela de Profissional -->
+                        <?php foreach ($funcao as $ocupacao):
+                        if ($profissional->idOccupations == $ocupacao->id) {?> 
+                        <td><?php echo $ocupacao->tipoOcupacao?></td>
+                        <?php } endforeach?>
+                                            
+                   
                         <td><?php echo $profissional->tel?></td>
                         <td><?php echo $profissional->cel?></td>
                         <td><?php echo strftime("%d/%m/%Y", strtotime($profissional->created_at))?></td>
