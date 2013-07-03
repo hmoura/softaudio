@@ -47,7 +47,7 @@
                 </div>
              
                  <div class="controls controls-row">  
-                    <input class="span2" type="date" required name="dataNascimento" placeholder="Data de Nascimento" value="<?php echo $pessoa->data_nascimento?>"/>
+                    <input class="span2" type="date" required name="dataNascimento" placeholder="Data de Nascimento" value="<?php echo $pessoa->dataNascimento?>"/>
                     <input class="span2" type="text" required name="cpf" placeholder="CPF" value="<?php echo $pessoa->cpf?>"/>
                     <input class="span2" type="text" required name="rg" placeholder="RG" value="<?php echo $pessoa->rg?>"/>
                 </div>

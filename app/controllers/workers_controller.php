@@ -6,7 +6,9 @@ class Workers_Controller extends App_Controller{
     {
         if ($_POST)
         {
+            var_dump($_POST);
             global $MSG;
+
         /*
                // 1. cria um array com os dados do objeto
             $data = array(
@@ -71,6 +73,7 @@ class Workers_Controller extends App_Controller{
             $dao = new DAO();
             $profissional->set('nome', $_POST['nome']);
             $profissional->set('rg', $_POST['rg']);
+            $profissional->set('$idOccupations', $_POST['$idOccupations']);
             $profissional->set('cpf', $_POST['cpf']);
             $profissional->set('dataNascimento', $_POST['dataNascimento']);
             $profissional->set('cr', $_POST['cr']);

@@ -90,6 +90,7 @@
              
                  <div class="controls controls-row"> 
                     <input class="span2" type="date" name="dataNascimento" required placeholder="Data de Nascimento"/>
+                    
                     <input class="span2" type="text" required name="cpf" placeholder="CPF"/>
                     <input class="span2" type="text" required name="rg" placeholder="RG"/>
                    

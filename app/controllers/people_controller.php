@@ -13,7 +13,7 @@ class People_Controller extends App_Controller{
                 'nome'            => $_POST['nome'],
                 'cpf'             => $_POST['cpf'],
                 'rg'              => $_POST['rg'],
-                'dataNascimento' => $_POST['dataNascimento'],
+                'dataNascimento'  => $_POST['dataNascimento'],
                 'rua'             => $_POST['rua'],
                 'bairro'          => $_POST['bairro'],
                 'complemento'     => $_POST['complemento'],

@@ -40,17 +40,19 @@
                 </div>
 
                 <div class="controls controls-row">  
+
                     <select class="span3" type="text" required name="idOccupations" placeholder="Função">
-                        <option></option>
-                        <!-- Como Estava antes -->
+                      <!-- Buscar chave estrangeira -->
+                        <?php foreach ($funcao as $ocupacao):
+                        if ($profissional->idOccupations == $ocupacao->id) {?> 
+                        <option value="<?php echo $profissional->idOccupations?>">-- <?php echo $ocupacao->tipoOcupacao?> --</option>
+                        <?php } endforeach?>
+                       
+                        <!-- Buscar outros campos -->
                         <?php foreach ($funcao as $ocupacao):?> 
                             <?php echo "<option value=".$ocupacao->id.">".$ocupacao->tipoOcupacao."</option>"?>
                         <?php endforeach?>
-                        
-                        <!-- Como ficou depois que mexemos 
-                        <?php foreach ($funcao as $ocupacao):?> 
-                            <option value="<?php echo $ocupacao->id == $profissional->idOccupations?>"><?php echo $profissional->idOccupations?></option>
-                        <?php endforeach?>-->
+                      
                     </select>
                     <input class="span3" type="date" name="dataNascimento" required placeholder="Data de Nascimento" value="<?php echo $profissional->dataNascimento?>"/>
                 </div>
