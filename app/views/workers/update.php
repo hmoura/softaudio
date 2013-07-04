@@ -49,9 +49,9 @@
                         <?php } endforeach?>
                        
                         <!-- Buscar outros campos -->
-                        <?php foreach ($funcao as $ocupacao):?> 
-                            <?php echo "<option value=".$ocupacao->id.">".$ocupacao->tipoOcupacao."</option>"?>
-                        <?php endforeach?>
+                        <?php foreach ($funcao as $ocupacao):?>
+                            <option value="<?php echo $ocupacao->id?>"><?php echo $ocupacao->tipoOcupacao ?></option> 
+                         <?php endforeach?>
                       
                     </select>
                     <input class="span3" type="date" name="dataNascimento" required placeholder="Data de Nascimento" value="<?php echo $profissional->dataNascimento?>"/>

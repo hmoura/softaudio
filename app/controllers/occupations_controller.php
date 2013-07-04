@@ -5,7 +5,9 @@ class Occupations_Controller extends App_Controller{
     function add()
     {
         if ($_POST)
-        { global $MSG;
+          var_dump($_POST);
+        { 
+          global $MSG;
         
              
 

@@ -6,7 +6,7 @@ class Workers_Controller extends App_Controller{
     {
         if ($_POST)
         {
-            var_dump($_POST);
+           var_dump($_POST);
             global $MSG;
 
         /*
@@ -70,10 +70,11 @@ class Workers_Controller extends App_Controller{
     {    global $MSG;
         if ($_POST && @$_POST['profissional'])
         {
+            var_dump($_POST);
             $dao = new DAO();
             $profissional->set('nome', $_POST['nome']);
             $profissional->set('rg', $_POST['rg']);
-            $profissional->set('$idOccupations', $_POST['$idOccupations']);
+            $profissional->set('idOccupations', $_POST['idOccupations']);
             $profissional->set('cpf', $_POST['cpf']);
             $profissional->set('dataNascimento', $_POST['dataNascimento']);
             $profissional->set('cr', $_POST['cr']);

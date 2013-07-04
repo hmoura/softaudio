@@ -9,8 +9,9 @@
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
        <?php
 
-        $controller = new Workers_Controller();
-       $controller->add();?>
+       $controller = new Workers_Controller();
+       $controller->add();
+       ?>
         
 
         <?php
