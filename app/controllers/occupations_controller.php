@@ -12,11 +12,11 @@ class Occupations_Controller extends App_Controller{
              
 
             // 1. cria um array com os dados do objeto
-            $data = array(
-                'tipoOcupacao'            => $_POST['tipoOcupacao'],
-              );
+           // $data = array(
+           //     'tipoOcupacao'            => $_POST['tipoOcupacao'],
+           //   );
             // 2. instanciar o objeto passando como parâmetro os atributos
-            $ocupacao = new Occupation($data);
+            $ocupacao = new Occupation($_POST);
 
             // caso os índices do $_POST tenham os mesmos nomes dos atributos da classe
             // basta passar o $_POST inteiro como parâmetro, 

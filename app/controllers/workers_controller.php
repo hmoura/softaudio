@@ -9,7 +9,7 @@ class Workers_Controller extends App_Controller{
            var_dump($_POST);
             global $MSG;
 
-        /*
+        
                // 1. cria um array com os dados do objeto
             $data = array(
                 'nome'            => $_POST['nome'],
@@ -28,11 +28,11 @@ class Workers_Controller extends App_Controller{
                 'email'           => $_POST['email'],
                 'cel'             => $_POST['cel'],
                 'tel'             => $_POST['tel'],);
-            */
+           
 
             // 2. instanciar o objeto passando como parâmetro os atributos
-            //$profissional = new Worker($data);
-            $profissional = new Worker($_POST);
+           $profissional = new Worker($data);
+           // $profissional = new Worker($_POST);
 
             // caso os índices do $_POST tenham os mesmos nomes dos atributos da classe
             // basta passar o $_POST inteiro como parâmetro, 

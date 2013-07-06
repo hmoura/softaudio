@@ -33,7 +33,7 @@
         </script>
 
         
-
+    
     </head>
       
     <body>
@@ -46,6 +46,7 @@
 
                 <li><a href="#tab2" data-toggle="tab">Cadastrar Profissional</a></li>
             </ul>
+          
             <div class="tab-content">
                 <div class=" tab-pane active" id="tab1">
                    	<p class="titulo">Listar Profissionais Cadastradas</p>
@@ -106,8 +107,8 @@
                 <div class="controls controls-row">  
                     <select class="span3" type="text" required name="idOccupations" placeholder="Função">
                         <option></option>
-                        <?php foreach ($funcao as $ocupacao):?> 
-                            <?php echo "<option value=".$ocupacao->id.">".$ocupacao->tipoOcupacao."</option>"?>
+                        <?php foreach ($funcao as $ocupacao):?>
+                        <option value="<?php echo $ocupacao->id?>"><?php echo $ocupacao->tipoOcupacao?></option> 
                         <?php endforeach?>
                     </select>
                     <input class="span3" type="date" name="dataNascimento" required placeholder="Data de Nascimento"/>

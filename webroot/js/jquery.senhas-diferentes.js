@@ -2,14 +2,7 @@ function ver_senha(id)
         {
             var senha = document.getElementById(id);
             var senhaC = document.getElementById(id+'C');
-            var nome = document.getElementById(id);
-
-            if (nome.value  = "")
-            {
-                alert("Favor preenche o campo nome");
-                botao.disabled = true;
-                nome.style.backgroundColor = "#FD5353";
-            } else {
+            
             if (senha.value != senhaC.value)
             {
                 senha.style.backgroundColor = "#FD5353";
@@ -27,5 +20,4 @@ function ver_senha(id)
 
             return true;
         }
-            return false;
-        }   
+            

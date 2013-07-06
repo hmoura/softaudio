@@ -39,7 +39,10 @@ class People_Controller extends App_Controller{
           {
                 $MSG->success[] = ' ';
           }
-
+		else 
+		{
+			 $MSG->error[] = 'Falha ao cadastrar';
+		}
             
         }
     }
