@@ -23,7 +23,6 @@
       
     <body>
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
-        <?php echo $_SESSION['nome']?> 
          <div class="container tabbable"> <!-- Only required for left/right tabs -->
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Listar Pacientes Cadastradas</a></li>
