@@ -12,7 +12,9 @@ $dao = new DAO();
 // default messages
 $MSG = new stdClass();
 $MSG->success = NULL;// green
+$MSG->edit = NULL;//verde
 $MSG->error   = NULL;// red
+$MSG->logado   = NULL;// red
 $MSG->alert   = NULL;// yellow
 $MSG->notice  = NULL;// blues
 

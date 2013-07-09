@@ -38,7 +38,7 @@
 
                  <div class="controls">
                     <label class="control-label">Nome Completo*: </label>
-                    <input type="text" name="nome" required placeholder="Nome Completo" class="span6" value="<?php echo $pessoa->nome?>"/>
+                    <input type="text" name="nome" required placeholder="Nome Completo" maxlength="80" class="span6" value="<?php echo $pessoa->nome?>"/>
                 </div>
                 <div class="controls controls-row " >
                     <label class="span2" >Data de Nascimento*: </label>
@@ -47,7 +47,7 @@
                 </div>
              
                  <div class="controls controls-row">  
-                    <input class="span2" type="date" required name="data_nascimento" placeholder="Data de Nascimento" value="<?php echo $pessoa->data_nascimento?>"/>
+                    <input class="span2" type="date" required name="dataNascimento" placeholder="Data de Nascimento" value="<?php echo $pessoa->dataNascimento?>"/>
                     <input class="span2" type="text" required name="cpf" placeholder="CPF" value="<?php echo $pessoa->cpf?>"/>
                     <input class="span2" type="text" required name="rg" placeholder="RG" value="<?php echo $pessoa->rg?>"/>
                 </div>
@@ -58,7 +58,7 @@
                     
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="rua" required placeholder="Rua" value="<?php echo $pessoa->rua?>"/>
+                    <input class="span4" type="text" name="rua" required maxlength="50" placeholder="Rua" value="<?php echo $pessoa->rua?>"/>
                     <input class="span2" type="text" name="numero" required placeholder="Número" value="<?php echo $pessoa->numero?>"/>  
                     
                 </div>
@@ -68,12 +68,12 @@
                     <label class="span1">CEP*: </label>
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="bairro" required placeholder="Bairro" value="<?php echo $pessoa->bairro?>"/>
+                    <input class="span4" type="text" name="bairro" required maxlength="50" placeholder="Bairro" value="<?php echo $pessoa->bairro?>"/>
                     <input class="span2" type="text" name="cep" required placeholder="CEP" value="<?php echo $pessoa->cep?>"/>
                 </div>
                 <div class="controls">
                     <label class="control-label">Complemento: </label>
-                    <input class="span6" type="text" name="complemento" placeholder="Complemento" value="<?php echo $pessoa->complemento?>"/>
+                    <input class="span6" type="text" name="complemento" maxlength="100" placeholder="Complemento" value="<?php echo $pessoa->complemento?>"/>
                 </div>
 
                 <div class="controls controls-row" >
@@ -82,7 +82,7 @@
                 </div>
 
                <div class="controls controls-row" >
-                    <input class="span4" type="text" name="cidade" required placeholder="Cidade" value="<?php echo $pessoa->cidade?>"/>
+                    <input class="span4" type="text" name="cidade" required maxlength="80" placeholder="Cidade" value="<?php echo $pessoa->cidade?>"/>
                     <select class="span2" type="text" name="estado" rows="5" required placeholder="Estado">
                                 <option value="<?php echo $pessoa->estado?>">-- <?php echo $pessoa->estado?> --</option>
                                  <option value="AC">AC</option>
@@ -125,7 +125,7 @@
                 </div>
                 <div class="controls">
                     <label class="control-label">E-mail: </label>
-                    <input class="span6" type="email" name="email" placeholder="E-mail" value="<?php echo $pessoa->email?>"/>
+                    <input class="span6" type="email" name="email" placeholder="E-mail" maxlength="50" value="<?php echo $pessoa->email?>"/>
                 </div>
                 <br>
                 <center>

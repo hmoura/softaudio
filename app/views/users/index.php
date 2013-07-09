@@ -1,57 +1,9 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml">
-<script type="text/javascript" src="<?php echo WEBROOT?>/bootstrap/js/jquery-ui.js"></script>
+
 	
     <head>
-        <?php auth('yes')?>
-
-       
-             <script>     
-           function ver_senha(id)
-        {
-            var senha = document.getElementById(id);
-            var senhaC = document.getElementById(id+'C');
-            if (senha.value != senhaC.value)
-            {
-                senha.style.backgroundColor = "#FD5353";
-                senhaC.style.backgroundColor = "#FD5353";
-                botao.disabled = true;
-                alert("Senha diferentes")
-                return false;
-
-            } else {
-                botao.disabled = false;
-            }
-            senha.style.backgroundColor = "#88F79B";
-            senhaC.style.backgroundColor = "#88F79B";
-
-            return true;
-        }   </script> 
-        <script type="text/javascript">
-        function valida( frm )
-{
-var nome = frm.nome.value ;
-var msg = "" ;
-if ( nome.search( /\s/g ) != -1 )
-{
-msg+= "Não é permitido espaços em branco\n" ;
-nome = nome.replace( /\s/g , "" ) ;
-}   
-if ( nome.search( /[^a-z0-9]/i ) != -1 )
-{
-msg += "Não é permitido caracteres especiais" ;
-nome = nome.replace( /[^a-z0-9]/gi , "" ) ;
-}
-if ( msg )
-{
-alert( msg ) ;
-frm.nome.value = nome ;
-return false ;
-}
-return true ;   
-}
-      
-</script>
+        
 
   <?php
         
@@ -83,11 +35,37 @@ return true ;
     }
     
         ?>
+<script>
+ function ver_senha(id)
+        {
+            var senha = document.getElementById(id);
+            var senhaC = document.getElementById(id+'C');
+            
+            if (senha.value != senhaC.value)
+            {
+                senha.style.backgroundColor = "#FD5353";
+                senhaC.style.backgroundColor = "#FD5353";
+
+                botao.disabled = true;
+                alert("Senha diferentes")
+                return false;
+
+            } else {
+                botao.disabled = false;
+            }
+            senha.style.backgroundColor = "#88F79B";
+            senhaC.style.backgroundColor = "#88F79B";
+
+            return true;
+        }
+
+</script>
       
         <?php
-        $usuarios = $dao->Retrieve('Users', 'where deleted_at = "0000-00-00 00:00:00"  order by nome');
+        $usuarios = $dao->Retrieve('Users', 'order by nome');
         ?>
     	<title>SoftAudio</title>
+       <?php auth('yes')?>
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
         
     </head>
@@ -139,13 +117,13 @@ return true ;
                 <p class="titulo form-signin-heading">Novo Usuário</p>
                 
                 <label>Login*: </label>
-                <input type="text" id="nome" name="nome" required class="span4" /><br />
+                <input type="text" id="nome" maxlength="40" name="nome"  required class="span4" /><br />
 
                 <label>Senha*: </label>
-                <input type="password" name="senha" id="senha"  required class="span4" /><br />
+                <input type="password" name="senha" maxlength="30" id="senha"  required class="span4" /><br />
 
                 <label>Confirma senha*: </label>
-                <input type="password" name="senhaC" id="senhaC" onchange="ver_senha('senha')" required class="span4" /><br />
+                <input type="password" name="senhaC" id="senhaC" maxlength="30" onchange="ver_senha('senha')" required class="span4" /><br />
                 
 
                 <label>E-mail*: </label>

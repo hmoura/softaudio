@@ -4,14 +4,13 @@ if ($_POST)
     global $MSG;
     $dados = array(
         'nome' => $_POST['nome'],
-        'senha' => md5($_POST['senha']),
-        'deleted_at' => ('0000-00-00 00:00:00')
+        'senha' => md5($_POST['senha'])
         
     );
 
      
     
-    $usuario = $dao->Retrieve('Users', $dados);//se colocar o terceiro parametro ele retorna a string da pesquisa
+    $usuario = $dao->Retrieve('Users', $dados, true,true);//se colocar o terceiro parametro ele retorna a string da pesquisa
 
     
     if ($usuario)
@@ -28,7 +27,7 @@ if ($_POST)
     }
     else
     {
-        $MSG->error[] = 'Erro ao logar. Verifique os dados e tente novamente.';
+        $MSG->logado[] = '';
     }
 }
 ?>
@@ -43,6 +42,7 @@ if ($_POST)
     </head>
       
     <body>
+       
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
         <div class="container" >
         	  <?php default_messages()?>

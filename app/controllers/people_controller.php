@@ -13,7 +13,7 @@ class People_Controller extends App_Controller{
                 'nome'            => $_POST['nome'],
                 'cpf'             => $_POST['cpf'],
                 'rg'              => $_POST['rg'],
-                'data_nascimento' => $_POST['data_nascimento'],
+                'dataNascimento'  => $_POST['dataNascimento'],
                 'rua'             => $_POST['rua'],
                 'bairro'          => $_POST['bairro'],
                 'complemento'     => $_POST['complemento'],
@@ -39,7 +39,10 @@ class People_Controller extends App_Controller{
           {
                 $MSG->success[] = ' ';
           }
-
+		else 
+		{
+			 $MSG->error[] = 'Falha ao cadastrar';
+		}
             
         }
     }
@@ -49,7 +52,7 @@ class People_Controller extends App_Controller{
 		$dao = new DAO();
 
 		// método Retrieve() - Nome da classe e parâmetros de busca
-        $lista = $dao->Retrieve('People', 'where deleted_at = "0000-00-00 00:00:00"  order by nome');
+        $lista = $dao->Retrieve('People', 'where deleted_at is null order by nome');
 
         return $lista;
 	}
@@ -78,7 +81,7 @@ class People_Controller extends App_Controller{
 
            if($dao->Update($pessoa))
             {
-                 $MSG->editado[] = '';
+                 $MSG->edit[] = '';
                 
            }else
            {

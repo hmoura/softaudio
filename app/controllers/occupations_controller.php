@@ -5,16 +5,18 @@ class Occupations_Controller extends App_Controller{
     function add()
     {
         if ($_POST)
-        { global $MSG;
+         
+        { 
+          global $MSG;
         
-             
+              var_dump($_POST);
 
             // 1. cria um array com os dados do objeto
-            $data = array(
-                'tipoOcupacao'            => $_POST['tipoOcupacao'],
-              );
+           // $data = array(
+           //     'tipoOcupacao'            => $_POST['tipoOcupacao'],
+           //   );
             // 2. instanciar o objeto passando como parâmetro os atributos
-            $ocupacao = new Occupation($data);
+            $ocupacao = new Occupation($_POST);
 
             // caso os índices do $_POST tenham os mesmos nomes dos atributos da classe
             // basta passar o $_POST inteiro como parâmetro, 
@@ -44,7 +46,7 @@ class Occupations_Controller extends App_Controller{
 		$dao = new DAO();
 
 		// método Retrieve() - Nome da classe e parâmetros de busca
-        $funcao = $dao->Retrieve('Occupations', 'where deleted_at = "0000-00-00 00:00:00"  order by tipoOcupacao');
+        $funcao = $dao->Retrieve('Occupations', 'where deleted_at is null order by tipoOcupacao');
 
         return $funcao;
 	}
@@ -63,7 +65,7 @@ class Occupations_Controller extends App_Controller{
             
            if($dao->Update($ocupacao))
            {
-                 $MSG->editado[] = '';
+                 $MSG->edit[] = '';
                 
            }else
            {

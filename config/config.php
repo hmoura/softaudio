@@ -7,7 +7,7 @@ header('Content-type: text/html; charset=utf-8');
 session_name('f1eab0a18e58e4702476283e44486c800fc');
 session_start();
 ob_start();
-//set_time_limit(20);
+set_time_limit(20);
 date_default_timezone_set('America/Recife');
 ini_set('display_errors', 0);// 0 for production
 
@@ -19,13 +19,13 @@ $DOCUMENT_ROOT = dirname(__FILE__);
 $DOCUMENT_ROOT = substr($DOCUMENT_ROOT, 0, strpos($DOCUMENT_ROOT, DS."config"));
 
 // configuracao de servidor
-define('DIR', '');
+define('DIR', '/softaudio');
 define('SYSTEM_NAME', 'SoftAudio');
 
 // configuracao do banco de dados
-define('HOST', 'mysql.hostinger.com.br');
-define('DATABASE', 'u646886009_soft');
-define('USERNAME', 'u646886009_hw');
+define('HOST', 'localhost');
+define('DATABASE', 'softaudi_soft');
+define('USERNAME', 'softaudi_root');
 define('PASSWORD', '81114237');
 
 

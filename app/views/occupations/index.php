@@ -7,10 +7,8 @@
         
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
         <?php
-
         $controller = new Occupations_Controller();
         $controller->add();
-       
         ?>
         
 
@@ -33,8 +31,6 @@
             <div class="tab-content">
                 <div class=" tab-pane active" id="tab1">
                     <p class="titulo">Listar Funções Cadastradas</p>
-
-                
                     <?php default_messages()?>
             <table class="table table-striped table-hover table-bordered">
                 <thead>
@@ -64,15 +60,13 @@
         </div>
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?>
         <div class="tab-pane" id="tab2">
-             
-
-            
+                         
 
             <form action="" method="post" class="form-cadastro-pequeno">
                 <p class="titulo form-signin-heading">Nova Função</p>
 
                 <label>Função*: </label>
-                <input type="text" required name="tipoOcupacao" /><br />
+                <input type="text" maxlength="45" required name="tipoOcupacao" /><br />
                 <br>
                 <center>
                     <button type="submit" class="btn btn-primary espaco-direita">Cadastrar</button>
@@ -84,9 +78,7 @@
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?> 
         <?php include(DOCROOT.'/app/views/public/_inc_footer.php');?>
                 </div>
-            </div>
-        
-        	
+            </div>  	
     </body>
 </html>
 

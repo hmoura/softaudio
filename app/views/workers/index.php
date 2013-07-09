@@ -9,8 +9,9 @@
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
        <?php
 
-        $controller = new Workers_Controller();
-       $controller->add();?>
+       $controller = new Workers_Controller();
+       $controller->add();
+       ?>
         
 
         <?php
@@ -32,7 +33,7 @@
         </script>
 
         
-
+    
     </head>
       
     <body>
@@ -45,6 +46,7 @@
 
                 <li><a href="#tab2" data-toggle="tab">Cadastrar Profissional</a></li>
             </ul>
+          
             <div class="tab-content">
                 <div class=" tab-pane active" id="tab1">
                    	<p class="titulo">Listar Profissionais Cadastradas</p>
@@ -53,7 +55,7 @@
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                       <!-- <th>Função</th>-->
+                        <th>Função</th>                        
                         <th>Telefone</th>
                         <th>Celular</th>
                         <th>Data de Cadastro</th>
@@ -65,8 +67,14 @@
                
                 <?php foreach ($lista as $profissional):?>
                     <tr>
-                        <td><?php echo $profissional->nome?></td>                       
-                     <!--   <td><?php echo $profissional->ocupacao?></td> -->
+                        <td><?php echo $profissional->nome?></td>  
+                        <!-- Buscar chave estrangeira e mostrar na GRID index da tabela de Profissional -->
+                        <?php foreach ($funcao as $ocupacao):
+                        if ($profissional->idOccupations == $ocupacao->id) {?> 
+                        <td><?php echo $ocupacao->tipoOcupacao?></td>
+                        <?php } endforeach?>
+                                            
+                   
                         <td><?php echo $profissional->tel?></td>
                         <td><?php echo $profissional->cel?></td>
                         <td><?php echo strftime("%d/%m/%Y", strtotime($profissional->created_at))?></td>
@@ -89,7 +97,7 @@
 
                 <div class="controls">
                     <label class="control-label">Nome Completo*: </label>
-                    <input type="text" name="nome" required placeholder="Nome Completo" class="span6"/>
+                    <input type="text" name="nome" maxlength="80" required placeholder="Nome Completo" class="span6"/>
                 </div>
                 
                 <div class="controls controls-row " >
@@ -100,8 +108,8 @@
                 <div class="controls controls-row">  
                     <select class="span3" type="text" required name="idOccupations" placeholder="Função">
                         <option></option>
-                        <?php foreach ($funcao as $ocupacao):?> 
-                            <?php echo "<option value=".$ocupacao->id.">".$ocupacao->tipoOcupacao."</option>"?>
+                        <?php foreach ($funcao as $ocupacao):?>
+                        <option value="<?php echo $ocupacao->id?>"><?php echo $ocupacao->tipoOcupacao?></option> 
                         <?php endforeach?>
                     </select>
                     <input class="span3" type="date" name="dataNascimento" required placeholder="Data de Nascimento"/>
@@ -123,8 +131,8 @@
                     
                 </div>
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="rua" required placeholder="Rua"/>
-                    <input class="span2" type="text" name="numero" required placeholder="Número"/>  
+                    <input class="span4" type="text" name="rua" maxlength="50" required placeholder="Rua"/>
+                    <input class="span2" type="text" name="numero" required maxlength="5" placeholder="Número"/>  
                     
                 </div>
 
@@ -134,13 +142,13 @@
                 </div>
                
                 <div class="controls controls-row">
-                    <input class="span4" type="text" name="bairro" required placeholder="Bairro"/>
+                    <input class="span4" type="text" name="bairro" maxlength="50" required placeholder="Bairro"/>
                     <input class="span2" type="text" name="cep" required placeholder="CEP"/>
                 </div>
 
                 <div class="controls">
                     <label class="control-label">Complemento: </label>
-                    <input class="span6" type="text" name="complemento" placeholder="Complemento"/>
+                    <input class="span6" type="text" name="complemento" maxlength="100" placeholder="Complemento"/>
                 </div>
 
                <div class="controls controls-row" >
@@ -149,7 +157,7 @@
                 </div>
 
                <div class="controls controls-row" >
-                    <input class="span4" type="text" name="cidade" required placeholder="Cidade"/>
+                    <input class="span4" type="text" name="cidade" required maxlength="80" placeholder="Cidade"/>
                         <select class="span2" type="text" name="estado" rows="5" required placeholder="Estado">
                                 <option></option>
                                 <option value="AC">AC</option>
@@ -193,7 +201,7 @@
                 </div>
                 <div class="controls">
                     <label class="control-label">E-mail: </label>
-                    <input class="span6" type="email" name="email" placeholder="E-mail"/>
+                    <input class="span6" type="email" name="email" maxlength="80" placeholder="E-mail"/>
                 </div>
                 <br>
                 <center>

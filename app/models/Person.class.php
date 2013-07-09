@@ -5,7 +5,7 @@ class Person extends Common
     public $nome;
     public $cpf;
     public $rg;
-    public $data_nascimento;
+    public $dataNascimento;
     public $rua;
     public $bairro;
     public $complemento;
