@@ -42,6 +42,7 @@ if ($_POST)
     </head>
       
     <body>
+       
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
         <div class="container" >
         	  <?php default_messages()?>

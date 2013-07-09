@@ -7,10 +7,8 @@
         
         <?php include(DOCROOT.'/app/views/public/_inc_head.php');?>
         <?php
-
         $controller = new Occupations_Controller();
         $controller->add();
-       
         ?>
         
 
@@ -64,9 +62,7 @@
         </div>
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?>
         <div class="tab-pane" id="tab2">
-             
-
-            
+                         
 
             <form action="" method="post" class="form-cadastro-pequeno">
                 <p class="titulo form-signin-heading">Nova Função</p>
@@ -84,9 +80,7 @@
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?> 
         <?php include(DOCROOT.'/app/views/public/_inc_footer.php');?>
                 </div>
-            </div>
-        
-        	
+            </div>  	
     </body>
 </html>
 

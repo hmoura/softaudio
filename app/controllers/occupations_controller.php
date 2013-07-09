@@ -5,11 +5,11 @@ class Occupations_Controller extends App_Controller{
     function add()
     {
         if ($_POST)
-          var_dump($_POST);
+         
         { 
           global $MSG;
         
-             
+              var_dump($_POST);
 
             // 1. cria um array com os dados do objeto
            // $data = array(

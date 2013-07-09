@@ -13,7 +13,9 @@ class Workers_Controller extends App_Controller{
                // 1. cria um array com os dados do objeto
             $data = array(
                 'nome'            => $_POST['nome'],
+                
                 'idOccupations'   => $_POST['idOccupations'],
+                
                 'cpf'             => $_POST['cpf'],
                 'rg'              => $_POST['rg'],
                 'dataNascimento'  => $_POST['dataNascimento'],
@@ -74,7 +76,9 @@ class Workers_Controller extends App_Controller{
             $dao = new DAO();
             $profissional->set('nome', $_POST['nome']);
             $profissional->set('rg', $_POST['rg']);
+          
             $profissional->set('idOccupations', $_POST['idOccupations']);
+            
             $profissional->set('cpf', $_POST['cpf']);
             $profissional->set('dataNascimento', $_POST['dataNascimento']);
             $profissional->set('cr', $_POST['cr']);
@@ -92,8 +96,7 @@ class Workers_Controller extends App_Controller{
 
             if($dao->Update($profissional))
              {
-                 $MSG->edit[] = ''
-;                
+                 $MSG->edit[] = '';                
            }else
            {
                 $MSG->error[] = '';

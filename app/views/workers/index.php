@@ -55,7 +55,8 @@
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                        <th>Função</th>                        <th>Telefone</th>
+                        <th>Função</th>                        
+                        <th>Telefone</th>
                         <th>Celular</th>
                         <th>Data de Cadastro</th>
                         <th>Opções</th>

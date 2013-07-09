@@ -24,7 +24,7 @@
 <link rel="stylesheet" type="text/css" href="<?php echo WEBROOT?>/css/SpryValidationSelect.css"/>
 
 
- <link rel="stylesheet" href="/resources/demos/style.css" />
+
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
 
 
