@@ -28,7 +28,7 @@
        
                 <li class="divider-vertical"></li>
                 <?php if ($_SESSION):?>
-                    <li class="dropdown nome-login">Seja bem vindo(a) '<?php echo $_SESSION['nome']?>' - </li>
+                    <li class="dropdown nome-login">Seja bem vindo(a) <?php echo $_SESSION['nome']?> - </li>
                     <li><a href="<?php echo WWWROOT?>/session/logout">Sair</a></li>
                 <?php else:?>
                     <li><a href="<?php echo WWWROOT?>/session/login">Login</a></li>

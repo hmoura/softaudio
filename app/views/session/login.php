@@ -10,7 +10,7 @@ if ($_POST)
 
      
     
-    $usuario = $dao->Retrieve('Users', $dados);//se colocar o terceiro parametro ele retorna a string da pesquisa
+    $usuario = $dao->Retrieve('Users', $dados, true,true);//se colocar o terceiro parametro ele retorna a string da pesquisa
 
     
     if ($usuario)
