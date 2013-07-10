@@ -43,14 +43,10 @@
 
                     <select class="span3" type="text" required name="idOccupations" placeholder="Função">
                       <!-- Buscar chave estrangeira -->
-                        <?php foreach ($funcao as $ocupacao):
-                        if ($profissional->idOccupations == $ocupacao->id) {?> 
-                        <option value="<?php echo $profissional->idOccupations?>">-- <?php echo $ocupacao->tipoOcupacao?> --</option>
-                        <?php } endforeach?>
-                       
+
                         <!-- Buscar outros campos -->
                         <?php foreach ($funcao as $ocupacao):?>
-                            <option value="<?php echo $ocupacao->id?>"><?php echo $ocupacao->tipoOcupacao ?></option> 
+                            <option value="<?php echo $ocupacao->id?>" <?php if ($profissional->idOccupations == $ocupacao->id) {echo 'selected';}?> ><?php echo $ocupacao->tipoOcupacao ?></option> 
                          <?php endforeach?>
                       
                     </select>

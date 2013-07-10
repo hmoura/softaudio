@@ -24,15 +24,6 @@
         $controller = new Occupations_Controller();
         $funcao = $controller->search();
         ?>
-        <script>
-              jQuery(function($){
-                $("#cpf").mask("999.999.999-99");
-                $("#campoTelefone").mask("(999) 999-9999");
-                $("#campoSenha").mask("***-****");
-                });
-        </script>
-
-        
     
     </head>
       
@@ -81,7 +72,7 @@
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/workers/update/<?=$profissional->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;
-                                <a href="<?php echo WWWROOT?>/workers/delete/<?=$profissional->id?>"  class="btn btn-danger btn-small confirm">Excluir</a>
+                                <a href="<?php echo WWWROOT?>/workers/delete/<?=$profissional->id?>" class="btn btn-danger btn-small confirm">Excluir</a>
                             </div>
                         </td>
                     </tr>
@@ -215,5 +206,14 @@
          <?php include(DOCROOT.'/app/views/public/_inc_footer.php');?>
             </div>
         </div>
+        <script>
+              jQuery(function($){
+                $("#cpf").mask("999.999.999-99");
+                $("#campoTelefone").mask("(999) 999-9999");
+                $("#campoSenha").mask("***-****");
+                });
+        </script>
+
     </body>
+
 </html>

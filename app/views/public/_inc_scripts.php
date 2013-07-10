@@ -14,7 +14,8 @@
 
 <script href="http://code.jquery.com/jquery-1.10.2.js"></script>
 <script href="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
- 
+<script  type="text/javascript" src="<?php echo WEBROOT?>/js/jquery.maskedinput.js"></script>
+
 
       <!--  <script src="http://code.jquery.com/jquery-1.8.2.js"></script> -->
        <!-- <script src="http://code.jquery.com/ui/1.9.0/jquery-ui.js"></script> -->

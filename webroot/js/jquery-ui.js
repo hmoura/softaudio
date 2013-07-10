@@ -15000,8 +15000,3 @@ $.widget( "ui.tooltip", {
 	}
 });
 
-	$(document).on('click', '.confirm', function (e) {
-		if (!confirm($(this).data('confirm') || 'Você tem certeza que deseja continuar?'))
-			e.preventDefault();
-	})
-}( jQuery ) );
