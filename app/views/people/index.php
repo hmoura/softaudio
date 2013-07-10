@@ -23,7 +23,7 @@
       
     <body>
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
-        <?php echo $_SESSION['nome']?> 
+        
          <div class="container tabbable"> <!-- Only required for left/right tabs -->
             <ul class="nav nav-tabs">
                 <li class="active"><a href="#tab1" data-toggle="tab">Listar Pacientes Cadastradas</a></li>
@@ -40,11 +40,10 @@
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                        <th>Data de Nascimento</th>
                         <th>CPF</th>
                         <th>Telefone</th>
                         <th>Celular</th>                        
-                        <th>Data de Cadastro</th>
+                        <th>E-mail</th>
                         <th>Opções</th>
 
                     </tr>
@@ -54,12 +53,10 @@
                 <?php foreach ($lista as $pessoa):?>
                     <tr>
                         <td><?php echo $pessoa->nome?></td>
-
-                        <td><?php echo strftime("%d/%m/%Y", strtotime($pessoa->dataNascimento))?></td><!--$pessoa->data_nascimento-->
                         <td><?php echo $pessoa->cpf?></td> 
                         <td><?php echo $pessoa->tel?></td>
                         <td><?php echo $pessoa->cel?></td>
-                        <td><?php echo strftime("%d/%m/%Y", strtotime($pessoa->created_at))?></td>
+                        <td><?php echo $pessoa->email?></td>
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/people/update/<?=$pessoa->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;

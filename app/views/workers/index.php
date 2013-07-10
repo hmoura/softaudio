@@ -55,10 +55,11 @@
                 <thead>
                     <tr>
                         <th>Nome Completo</th>
-                        <th>Função</th>                        
+                        <th>Função</th> 
+                        <th>CPF</th>                        
                         <th>Telefone</th>
                         <th>Celular</th>
-                        <th>Data de Cadastro</th>
+                        <th>E-mail</th>
                         <th>Opções</th>
 
                     </tr>
@@ -74,10 +75,10 @@
                         <td><?php echo $ocupacao->tipoOcupacao?></td>
                         <?php } endforeach?>
                                             
-                   
+                        <td><?php echo $profissional->cpf?></td>
                         <td><?php echo $profissional->tel?></td>
                         <td><?php echo $profissional->cel?></td>
-                        <td><?php echo strftime("%d/%m/%Y", strtotime($profissional->created_at))?></td>
+                        <td><?php echo $profissional->email?></td>
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/workers/update/<?=$profissional->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;
