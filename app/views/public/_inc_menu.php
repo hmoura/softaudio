@@ -11,20 +11,17 @@
         <div class="navbar-inner">
             
             <ul class="nav nav-pills">
-                <li class="dropdown"><a href="<?php echo WWWROOT?>" class="dropdown">Início</a></li>
-            
-                <li class="divider-vertical"></li>
-                 <li class="dropdown"><a href="<?php echo WWWROOT?>/people">Paciente</a></li>
+                <li class="dropdown"><a href="<?php echo WWWROOT?>/people">Paciente</a></li>
           
-            <li class="divider-vertical"></li>
-            <li class="dropdown"><a href="<?php echo WWWROOT?>/occupations">Função</a></li>
-                   
-              
-            <li class="divider-vertical"></li>
-             <li class="dropdown"><a href="<?php echo WWWROOT?>/workers">Profissional</a></li>
-         
-            <li class="divider-vertical"></li>
-             <li class="dropdown"><a href="<?php echo WWWROOT?>/users">Usuário</a></li>
+                <li class="divider-vertical"></li>
+                <li class="dropdown"><a href="<?php echo WWWROOT?>/occupations">Função</a></li>
+                       
+                  
+                <li class="divider-vertical"></li>
+                 <li class="dropdown"><a href="<?php echo WWWROOT?>/workers">Profissional</a></li>
+             
+                <li class="divider-vertical"></li>
+                 <li class="dropdown"><a href="<?php echo WWWROOT?>/users">Usuário</a></li>
        
                 <li class="divider-vertical"></li>
                 <?php if ($_SESSION):?>
