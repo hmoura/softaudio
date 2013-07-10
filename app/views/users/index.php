@@ -100,6 +100,7 @@
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/users/update/<?=$usuario->id?>" class="btn btn-primary btn-small">Editar</a>&nbsp;&nbsp;
+                                <a href="<?php echo WWWROOT?>/users/update-senha/<?=$usuario->id?>" class="btn btn-primary btn-small">Editar Senha</a>&nbsp;&nbsp;
                                 <a href="<?PHP echo WWWROOT?>/users/delete/<?=$usuario->id?>" class="btn btn-danger btn-small confirm">Excluir</a>
                                 
                             </div>
