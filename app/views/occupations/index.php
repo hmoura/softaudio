@@ -36,7 +36,6 @@
                 <thead>
                     <tr>
                         <th>Função</th>
-                        <th>Data de Cadastro</th>
                         <th>Opções</th>
 
                     </tr>
@@ -46,7 +45,6 @@
                 <?php foreach ($funcao as $ocupacao):?>
                     <tr>
                         <td><?php echo $ocupacao->tipoOcupacao?></td>
-                        <td><?php echo strftime("%d/%m/%Y", strtotime($ocupacao->created_at))?></td><!--strftime("%d/%m/%Y %H:%M:%S", strtotime($hora))-->
                         <td>
                             <div align="center">
                                 <a href="<?php echo WWWROOT?>/occupations/update/<?=$ocupacao->id?>" class="btn btn-primary btn-small">Editar</a>

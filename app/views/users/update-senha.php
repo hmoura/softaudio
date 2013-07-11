@@ -21,7 +21,7 @@
         $usuario = $dao->Retrieve('User', $params[0]);
 
         $controller = new Users_Controller();
-        $controller->update($usuario);
+        $controller->update_senha($usuario);
 
         ?>
     </head>
@@ -36,20 +36,14 @@
                  <?php default_messages()?>
                 <input type="hidden" name="usuario" value="1" />
 
-                <label>Login: </label>
-                <input type="text" name="nome" maxlength="40" class="span4" required value="<?php echo $usuario->nome?>" /><br />
-
-                <label>E-mail: </label>
-                <input type="email" name="email" maxlength="80" class="span4" required value="<?php echo $usuario->email?>" /><br />
-
-              
+                <label>Senha: </label>
+                    <input type="password" name="senha" maxlength="30" class="span4" required value="<?php echo $usuario->senha?>" /><br />
                 <br>
                 <center>
                     <button type="submit" class="btn btn-large btn-primary">Confirmar</button>
-                    
                 <center>
             </form>
-            </div>
+        </div>
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?> <!-- Para por a barra de menu -->
          <?php include(DOCROOT.'/app/views/public/_inc_footer.php');?>
       

@@ -22,7 +22,6 @@ class Users_Controller extends App_Controller{
         	$dao = new DAO();
             $usuario->set('nome', $_POST['nome']);
             $usuario->set('email', $_POST['email']);
-            $usuario->set('senha', md5($_POST['senha']));
            // var_dump($_POST); //Para mostrar se estar mesmo gravando
 
             if($dao->Update($usuario))
@@ -36,6 +35,26 @@ class Users_Controller extends App_Controller{
 
         }
 	}
+
+  function update_senha($usuario)
+  {   global $MSG;
+        if ($_POST && @$_POST['usuario'])
+        {
+          $dao = new DAO();
+            $usuario->set('senha', md5($_POST['senha']));
+           // var_dump($_POST); //Para mostrar se estar mesmo gravando
+
+            if($dao->Update($usuario))
+                {
+                 $MSG->edit[] = '';
+                
+           }else
+           {
+                $MSG->error[] = '';
+           }
+
+        }
+  }
 
 
  
