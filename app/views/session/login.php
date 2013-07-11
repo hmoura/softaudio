@@ -46,7 +46,7 @@ if ($_POST)
         <?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
         <div class="container" >
         	  <?php default_messages()?>
-            <form action="" method="post" class="form-cadastro-medio">
+            <form action="" method="post" class="form-cadastro-medio-login">
                 <p class="titulo form-signin-heading" align="center">Login</p><br>
                 <label>Login:</label>
                 <input type="text" class="span4" required name="nome" id="nome" /><br>

@@ -93,6 +93,18 @@
       }
 /* FIM do Estilo para os formularios medios */
 
+/* Estilo para os formularios medios, como por exemplo Usuarios */
+.form-cadastro-medio-login {
+        max-width: 31%;
+        padding: 19px 29px 29px;
+        margin: 0 auto 20px;
+        background: #ffffff;
+        -webkit-border-radius: 6px;
+     -moz-border-radius: 6px;
+          border-radius: 6px;
+      }
+/* FIM do Estilo para os formularios medios */
+
 /* estilo para a class topo */
 .topo{
 

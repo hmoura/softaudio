@@ -8,7 +8,7 @@
 <body>
 	<?php include(DOCROOT.'/app/views/public/_inc_menu.php');?>
 	<div class="container">
-        <center><img src="http://softaudio.p.ht/webroot/img/404.png"><center>
+        <center><img src="http://softaudio.com.br/softaudio/webroot/img/404.png"><center>
     </div>
     <br>
     <?php include(DOCROOT.'/app/views/public/_inc_footer.php');?>
