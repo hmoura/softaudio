@@ -1,6 +1,6 @@
 <div class="container">
     <a  titulo="SoftAudio" href="<?php echo WWWROOT?>">
-          <center><img align="center" src="webroot/img/logo-softaudio.png"><center>
+          <center><img align="center" src="http://softaudio.com.br/softaudio/webroot/img/logo-softaudio.png"><center>
     </a>   
 </div>
 <div class="container">
