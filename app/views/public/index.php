@@ -13,7 +13,7 @@
             <div align="center">
             	<p class="topo-titulo">Bem vindo(a) ao projeto SoftAudio!</p>
                 <br><br>
-                <img class="text-center" src="http://softaudio.p.ht/webroot/img/construcao.png">
+                <img class="text-center" src="http://softaudio.com.br/softaudio/webroot/img/construcao.png">
             </div>
         </div>
         <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?>

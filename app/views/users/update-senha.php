@@ -36,9 +36,13 @@
                  <?php default_messages()?>
                 <input type="hidden" name="usuario" value="1" />
 
-                <label>Senha: </label>
-                    <input type="password" name="senha" maxlength="30" class="span4" required value="<?php echo $usuario->senha?>" /><br />
+                <label>Nova senha: </label>
+                    <input type="password" name="senha" maxlength="30" class="span4" required/><br />
                 <br>
+                <label>Repetir senha: </label>
+                    <input type="password" name="senhaC" maxlength="30" class="span4" required/><br />
+                <br>
+                
                 <center>
                     <button type="submit" class="btn btn-large btn-primary">Confirmar</button>
                 <center>

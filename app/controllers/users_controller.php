@@ -40,18 +40,26 @@ class Users_Controller extends App_Controller{
   {   global $MSG;
         if ($_POST && @$_POST['usuario'])
         {
-          $dao = new DAO();
+          if ($_POST['senha'] == $_POST['senhaC']){
+            $dao = new DAO();
             $usuario->set('senha', md5($_POST['senha']));
            // var_dump($_POST); //Para mostrar se estar mesmo gravando
 
             if($dao->Update($usuario))
                 {
-                 $MSG->edit[] = '';
+                 
+                
+                  $MSG->edit[] = '';
+                   //header( 'Location: http://softaudio.com.br/softaudio/users' ) ;
                 
            }else
            {
-                $MSG->error[] = '';
+                $MSG->error[] = 'Falha ao cadastrar registro';
            }
+         }else
+         {
+          $MSG->error[] = 'Senha não confere !';
+         }
 
         }
   }

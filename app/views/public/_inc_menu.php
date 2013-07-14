@@ -1,10 +1,7 @@
 <div class="container">
     <a  titulo="SoftAudio" href="<?php echo WWWROOT?>">
-        <img align="left" src="http://softaudio.com.br/softaudio/webroot/img/logo.svg">
-    </a>
-    <a titulo="SoftAudio" href="<?php echo WWWROOT?>">
-        <p class="topo-titulo" align="center">SoftAudio</p> <!--Tentar pro o nome um pouco para a esquerda--> 
-    </a>    
+          <center><img align="center" src="http://softaudio.com.br/softaudio/webroot/img/logo-softaudio.png"><center>
+    </a>   
 </div>
 <div class="container">
     <div class="navbar">

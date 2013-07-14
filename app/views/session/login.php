@@ -47,11 +47,11 @@ if ($_POST)
         <div class="container" >
         	  <?php default_messages()?>
             <form action="" method="post" class="form-cadastro-medio">
-                <p class="titulo form-signin-heading" align="center">Login</p><br>
-                <label>Login:</label>
+                <p class="titulo form-signin-heading" align="center"><b>Login</b></p><br>
+                <label><b>Login:</b></label>
                 <input type="text" class="span4" required name="nome" id="nome" /><br>
 
-                <label>Senha:</label>
+                <label><b>Senha:</b></label>
                 <input type="password" class="span4" required name="senha" /><br><br>
                
                 <center>
