@@ -9,7 +9,7 @@ session_start();
 ob_start();
 set_time_limit(20);
 date_default_timezone_set('America/Recife');
-ini_set('display_errors', 0);// 0 for production
+ini_set('display_errors', 1);// 0 for production
 
 $request_uri = explode('/', $_SERVER['REQUEST_URI']);
 
@@ -24,9 +24,9 @@ define('SYSTEM_NAME', 'SoftAudio');
 
 // configuracao do banco de dados
 define('HOST', 'localhost');
-define('DATABASE', 'softaudi_soft');
-define('USERNAME', 'softaudi_root');
-define('PASSWORD', '81114237');
+define('DATABASE', 'Softaudio');
+define('USERNAME', 'soft');
+define('PASSWORD', '123');
 
 
 define('DOCROOT', $DOCUMENT_ROOT);

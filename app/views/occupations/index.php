@@ -56,7 +56,7 @@
                 </tbody>
             </table>
         </div>
-        <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?>
+        
         <div class="tab-pane" id="tab2">
                          
 
@@ -69,7 +69,7 @@
                 <center>
                     <button type="submit" class="btn btn-primary espaco-direita">Cadastrar</button>
                     <button type="reset" class="btn">Limpar</button>
-                <center>
+                </center>
 
             </form>
          </div>

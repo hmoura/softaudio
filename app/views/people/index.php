@@ -68,7 +68,6 @@
                 </tbody>
             </table>
     	</div>
-        <?php include(DOCROOT.'/app/views/public/_inc_scripts.php');?>
         <div class="tab-pane" id="tab2">
            
             <form action="" method="post" class="form-cadastro">
